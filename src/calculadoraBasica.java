@@ -177,7 +177,9 @@ public class calculadoraBasica  extends  JFrame{
         cButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+            val1.setText("");
+            val2.setText("");
+                
             }
         });
     }
