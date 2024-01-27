@@ -105,7 +105,13 @@ public class calculadoraBasica  extends  JFrame{
         porcentajeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                val1.getText();
+                val2.getText();
+                double numero1=Integer.parseInt(val1.getText());
+                double numero2=Integer.parseInt(val2.getText());
+                double porcentaje = (numero1 / numero2) * 100;
+                Resultado.setText(String.valueOf(porcentaje));
+                   
             }
         });
         senoButton.addActionListener(new ActionListener() {
@@ -115,7 +121,7 @@ public class calculadoraBasica  extends  JFrame{
 
                 double numero1=Integer.parseInt(val1.getText());
 
-                double seno=Math.sin(numero1);
+                double seno=Math.toDegrees(Math.sin(numero1));
                 Resultado.setText(String.valueOf(seno));
             }
         });
@@ -124,7 +130,7 @@ public class calculadoraBasica  extends  JFrame{
             public void actionPerformed(ActionEvent e) {
                 val1.getText();
                 double numero1=Integer.parseInt(val1.getText());
-                double coseno=Math.cos(numero1);
+                double coseno=Math.toDegrees(Math.cos(numero1));
                 Resultado.setText(String.valueOf(coseno));
             }
         });
@@ -135,7 +141,7 @@ public class calculadoraBasica  extends  JFrame{
 
                 double numero1=Integer.parseInt(val1.getText());
 
-                double tangente=Math.tan(numero1);
+                double tangente=Math.toDegrees(Math.tan(numero1));
                 Resultado.setText(String.valueOf(tangente));
             }
         });
@@ -146,7 +152,7 @@ public class calculadoraBasica  extends  JFrame{
 
                 double numero1=Integer.parseInt(val1.getText());
 
-                double arcotangente=Math.atan(numero1);
+                double arcotangente=Math.toDegrees(Math.atan(numero1));
                 Resultado.setText(String.valueOf(arcotangente));
             }
         });
@@ -157,7 +163,7 @@ public class calculadoraBasica  extends  JFrame{
 
                 double numero1=Integer.parseInt(val1.getText());
 
-                double secante=Math.asin(numero1);
+                double secante=Math.toDegrees(Math.asin(numero1));
                 Resultado.setText(String.valueOf(secante));
 
             }
@@ -169,7 +175,7 @@ public class calculadoraBasica  extends  JFrame{
 
                 double numero1=Integer.parseInt(val1.getText());
 
-                double cosecante=Math.acos(numero1);
+                double cosecante=Math.toDegrees(Math.acos(numero1));
                 Resultado.setText(String.valueOf(cosecante));
 
             }
